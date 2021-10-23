@@ -1,12 +1,12 @@
 const express = require("express");
-const https = require("https");
-const fs = require("fs");
+// const https = require("https");
+// const fs = require("fs");
 const qr = require("qrcode");
 
 const PORT = 3000;
-const certificate = fs.readFileSync("./public/sslcert/cert.pem", "utf-8");
-const privateKey = fs.readFileSync("./public/sslcert/key.pem", "utf-8");
-const credentials = { key: privateKey, cert: certificate };
+// const certificate = fs.readFileSync("./public/sslcert/cert.pem", "utf-8");
+// const privateKey = fs.readFileSync("./public/sslcert/key.pem", "utf-8");
+// const credentials = { key: privateKey, cert: certificate };
 
 const app = express();
 
@@ -29,6 +29,7 @@ app.post("/create", (req, res) => {
   });
 });
 
-const httpsServer = https.createServer(credentials, app);
+// const httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(PORT);
+// httpsServer.listen(PORT);
+app.listen(PORT);
