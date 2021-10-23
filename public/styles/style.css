@@ -1,0 +1,22 @@
+body{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+#camera-stream {
+    width: 80%;
+    z-index: -1;
+}
+body::after{
+    position: absolute;
+    content: "";
+    height: 25vw;
+    width: 25vw;
+    border: 3px solid blue;
+}
